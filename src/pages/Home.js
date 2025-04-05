@@ -8,52 +8,71 @@ const Home = () => (
 
     {/* About Us + Events side-by-side */}
     <div className="grid-two">
-  <div>
-    <h2>about us</h2>
-    <div className="card bordered-card"></div>
-  </div>
-  <div>
-    <h2>events</h2>
-    <div className="card bordered-card"></div>
-  </div>
-</div>
+      <div>
+        <h2>about us</h2>
+        <div className="card bordered-card"></div>
+      </div>
+      <div>
+        <h2>events</h2>
+        <div className="card bordered-card"></div>
+      </div>
+    </div>
 
 
     {/* Sponsorship full width */}
-    <div className="full-width">  
-  <h2>sponsorships</h2>
-  <div className="card bordered-card"></div>
-</div>
-
-    {/* Teams section (scrollable cards) */}
     <div className="full-width">
-      <h2>our teams</h2>
-      <div className="horizontal-scroll">
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
-        <div className="team-card" />
+      <h2>sponsorships</h2>
+      <div className="card bordered-card"></div>
+    </div>
+
+    <div className="full-width">
+      <h2>Teams</h2>
+      {/* Teams section (scrollable cards) */}
+      <div className="horizontal-scroll-wrapper">
+        <div className="horizontal-scroll" id="teams-scroll">
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+          <div className="team-card" />
+
+        </div>
+        <button
+          className="scroll-arrow"
+          onClick={() => {
+            const scrollContainer = document.getElementById("teams-scroll");
+            scrollContainer.scrollBy({ left: 200, behavior: "smooth" });
+          }}
+        >
+          ❯
+        </button>
       </div>
     </div>
+
+
 
     {/* What We Stand For full width */}
     <div className="full-width">
-  <h2>what we stand for</h2>
-  <div className="card bordered-card"></div>
-</div>
+      <h2>what we stand for</h2>
+      <div className="card bordered-card"></div>
+    </div>
     {/* Past Shows: grid of 3 */}
     <div className="full-width">
       <h2>past shows</h2>
-      <div className="horizontal-scroll">
+      <div className="horizontal-scroll-wrapper">
+        <div className="horizontal-scroll" id="past-shows-scroll">
         <div className="show-card" />
         <div className="show-card" />
         <div className="show-card" />
@@ -64,8 +83,17 @@ const Home = () => (
         <div className="show-card" />
         <div className="show-card" />
       </div>
+      <button
+          className="scroll-arrow"
+          onClick={() => {
+            const scrollContainer = document.getElementById("past-shows-scroll");
+            scrollContainer.scrollBy({ left: 200, behavior: "smooth" });
+          }}
+        >
+          ❯
+        </button>
     </div>
-
+    </div>
     <Footer />
   </div>
 );

@@ -139,11 +139,33 @@ h2 {
 
 
 
+.horizontal-scroll-wrapper {
+  position: relative;
+}
+
 .horizontal-scroll {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
+  scroll-behavior: smooth;
   padding: 1rem 0;
-  scrollbar-width: thin;
-  padding-bottom: 1.5rem;
 }
+
+.scroll-arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e5e5e5;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.scroll-arrow:hover {
+  background: #ccc;
+}
+
