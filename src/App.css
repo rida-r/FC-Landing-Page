@@ -95,3 +95,55 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+/* Containers */
+.full-width {
+  padding: 2rem 1rem;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+.grid-three {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  min-height: 150px;
+}
+
+.team-card, .show-card {
+  flex: 0 0 200px;
+  height: 150px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+/* Headings */
+h2 {
+  font-size: 1.2rem;
+  font-family: 'Futura', sans-serif;
+  text-transform: lowercase;
+  margin-bottom: 1rem;
+}
+
+
+
+.horizontal-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scrollbar-width: thin;
+  padding-bottom: 1.5rem;
+}
