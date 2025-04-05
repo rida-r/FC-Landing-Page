@@ -1,26 +1,32 @@
-import logo from '../logo.svg';
+import Hero from '../components/Hero';
+import Section from '../components/Section';
+import Footer from '../components/Footer';
 import '../App.css';
 
-const Home = () => {
-    return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    );
-  };
-  
-  export default Home;
-  
+const Home = () => (
+  <div>
+    <Hero />
+    <Section title="about us"></Section>
+    <Section title="events"></Section>
+    <Section title="sponsorships"></Section>
+    <Section title="our teams">
+      <div className="card-scroll">
+        <div className="team-card" />
+        <div className="team-card" />
+        <div className="team-card" />
+        <div className="team-card" />
+      </div>
+    </Section>
+    <Section title="what we stand for"></Section>
+    <Section title="past shows">
+      <div className="card-row">
+        <div className="show-card" />
+        <div className="show-card" />
+        <div className="show-card" />
+      </div>
+    </Section>
+    <Footer />
+  </div>
+);
+
+export default Home;
