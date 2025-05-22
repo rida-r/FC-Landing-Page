@@ -1,10 +1,12 @@
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import '../App.css';
+import Nav from '../components/Navbar.js'
 
 const Home = () => (
   <div>
     <Hero />
+    <Nav />
 
     {/* About Us + Events side-by-side */}
     <div className="grid-two">

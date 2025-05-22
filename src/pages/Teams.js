@@ -1,5 +1,15 @@
+import Nav from '../components/Navbar.js'
+
 const Teams = () => {
-    return <h1>Teams Page</h1>;
+    return(
+      <div className="teams">
+        <Nav/>
+
+        <div className="team-list">
+          
+        </div>
+      </div>
+    )
   };
   
   export default Teams;

@@ -1,30 +1,48 @@
-import logo from './logo.svg';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css';
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
-import Events from "./pages/Events";
-import Sponsorship from './pages/Sponsorship';
-import Teams from './pages/Teams';
-import Shows from './pages/Shows';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AboutUs from './pages/About.js'
+import Events from './pages/Events.js'
+import Shows from './pages/Shows.js'
+import Sponsorship from './pages/Sponsorship.js'
+import Team from './pages/Teams.js'
+import Home from './pages/Home.js'
 
 function App() {
   return (
-    <Router>
-      <Navbar />
+    <div className="App">
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} /> {/* Catch-all for 404 */}
-        <Route path="/events" element={<Events />} />
-        <Route path="/teams" element={<Teams />} />
-        <Route path="/sponsorship" element={<Sponsorship />} />
-        <Route path="/shows" element={<Shows />} />
+        <Route index element={<Home/>}></Route>
+        <Route
+          path="/"
+          element={<Home/>}
+        />
+        <Route
+          path="/about-us"
+          element={<AboutUs/>}
+        />
+        <Route
+          path="/events"
+          element={<Events/>}
+        />
+        <Route
+          path="/sponsorship"
+          element={<Sponsorship/>}
+        />
+        <Route
+          path="/teams"
+          element={<Team/>}
+        />
+        <Route
+          path="/shows"
+          element={<Shows/>}
+        />
       </Routes>
-    </Router>
+    </BrowserRouter>
+
+    </div>
   );
 }
 
 export default App;
+
