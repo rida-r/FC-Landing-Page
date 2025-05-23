@@ -259,13 +259,140 @@ h2 {
 /* Teams Page */
 .teams{
   margin-top: 10vh; 
-  height: 100vh; 
+  height: auto; 
   width: 100%; 
-  background-color: red; 
+  background-color: black; 
 }
 
 .teams .team-list{
-  background-color: blue; 
+  height: 61vh; 
+  margin: auto; 
+  display: flex; 
+  justify-content: space-evenly; 
+  flex-wrap: wrap; 
+}
+
+.teams .team-list a{
+  text-decoration: underline;
+  text-decoration-thickness: 0.8px; 
+  text-underline-position: under; 
+}
+
+.teams .team-list a:hover{
+  color: #E0FFFF; 
+}
+
+.teams .title{
+  font-size: 7vh; 
+  padding-top: 10vh; 
+  margin-bottom: 10vh; 
+  font-weight: bold; 
+}
+
+.teams h1, a, p{
+  color: white; 
+  text-decoration: none; 
+}
+
+.teams .team-nav{
+  font-size: 4vh; 
+  font-weight: bold; 
+  margin-right: 8vh; 
+  margin-left: 8vh; 
+  margin-top: 5vh; 
+  margin-bottom: 5vh; 
+}
+
+.team-header{
+  position: relative; 
+  text-align: center; 
+  display: flex; 
+  justify-content: space-between; 
+  width: 100%; 
+  height: 100vh;  
+  margin-bottom: 10vh; 
+}
+
+.team-header .header-text{
+  font-size: 5vh; 
+  position: absolute; 
+  bottom: 0; 
+  left: 10vh; 
+  z-index: 10; 
+}
+
+.team-header img{
+  height: 100%; 
+  width: 100%;
+  object-fit: fill; 
+  filter: brightness(50%);
+}
+
+.summary{
+  width: 80%; 
+  margin: auto; 
+  font-size: 3.5vh; 
+}
+
+.collage{
+  margin: 10vh 0 10vh 0; 
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  justify-content: space-evenly; 
+}
+
+.collage img{
+  width: 50vh; 
+  margin-bottom: 5vh; 
+}
+
+.teams .box{
+  width: 95%; 
+  height: 100vh; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin: auto;  
+}
+
+.box .inner-1{
   width: 50%; 
-  height: 10vh; 
+  float: left; 
+  margin-left: 2.5%; 
+  margin-right: 2.5%
+}
+
+.box li, .box h1{
+  text-align: left; 
+}
+
+.box h1{
+  margin-bottom: 8vh; 
+}
+
+.box ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box li{
+  font-size: 4vh; 
+  margin-bottom: 5vh;
+}
+
+.box .inner-2{
+  width: 50%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.box img{
+  width: 100%; 
+}
+
+.box li{
+  color: white; 
 }
