@@ -4,7 +4,10 @@ import logo from '../images/FC-Logo.svg'
 export default function Navbar(){
     return(
         <div className="nav">
-            <img className='logo' src={logo} alt='FC Logo'></img>
+
+            <a href='/'>
+                <img className='logo' src={logo} alt='FC Logo'></img>
+            </a>
 
             <div className="pages">
                 <a href='/about-us'>about us</a>

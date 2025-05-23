@@ -1,5 +1,3 @@
-import './Footer.css';
-
 const Footer = () => (
   <footer className="custom-footer">
     <div className="footer-grid">
